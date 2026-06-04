@@ -61,7 +61,7 @@ If your password has special characters like `@`, `#`, `/`, or `:`, URL-encode t
 ### Auth Service `.env`
 
 ```env
-PORT=5000
+PORT=5002
 MONGO_URI=mongodb+srv://<db_user>:<db_password>@<cluster-url>/internship_platform?retryWrites=true&w=majority
 JWT_SECRET=replace_with_a_long_random_secret
 JWT_EXPIRES_IN=1d
@@ -71,7 +71,7 @@ CLIENT_URL=http://localhost:5173
 ### Dashboard Service `.env`
 
 ```env
-PORT=5001
+PORT=5003
 MONGO_URI=mongodb+srv://<db_user>:<db_password>@<cluster-url>/internship_platform?retryWrites=true&w=majority
 JWT_SECRET=replace_with_the_same_secret_as_auth_service
 CLIENT_URL=http://localhost:5173
@@ -80,8 +80,8 @@ CLIENT_URL=http://localhost:5173
 ### Frontend `.env`
 
 ```env
-VITE_AUTH_API_URL=http://localhost:5000/api/auth
-VITE_DASHBOARD_API_URL=http://localhost:5001/api/dashboard
+VITE_AUTH_API_URL=http://localhost:5002/api/auth
+VITE_DASHBOARD_API_URL=http://localhost:5003/api/dashboard
 ```
 
 ## Running the Project
@@ -115,7 +115,7 @@ http://localhost:5173
 
 ### Register User
 
-`POST http://localhost:5000/api/auth/register`
+`POST http://localhost:5002/api/auth/register`
 
 Request:
 
@@ -152,7 +152,7 @@ Validation response:
 
 ### Login User
 
-`POST http://localhost:5000/api/auth/login`
+`POST http://localhost:5002/api/auth/login`
 
 Request:
 
